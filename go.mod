@@ -1,4 +1,4 @@
-module github.com/sandertv/gophertunnel
+module github.com/proyectoasd78-commits/gophertunne
 
 go 1.24.0
 
