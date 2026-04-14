@@ -23,6 +23,8 @@ func (*NetworkStackLatency) ID() uint32 {
 }
 
 func (pk *NetworkStackLatency) Marshal(io protocol.IO) {
-	io.Int64(&pk.Timestamp)
+	v := int32(pk.Timestamp)
+	io.Int32(&v)
+	pk.Timestamp = int64(v)
 	io.Bool(&pk.NeedsResponse)
 }
